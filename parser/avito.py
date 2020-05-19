@@ -28,7 +28,7 @@ class AvitoParser:
     def __init__(self):
         self.session = requests.Session()
         self.session.headers = {
-            'User - Agent': 'Mozilla / 5.0(X11; Ubuntu; Linux x86_64; rv: 72.0) Gecko / 20100101 Firefox / 72.0',
+            'User - Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:76.0) Gecko/20100101 Firefox/76.0',
             'Accept - Language': 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
         }
 
@@ -96,7 +96,7 @@ class AvitoParser:
             sleep(1 + random.randint(0, 10) / 10)
 
     def parse_all(self):
-        base_url = '/sankt-peterburg?q=%D0%BE%D0%B1%D0%B5%D1%80%D0%B5%D0%B3'
+        base_url = '/rossiya?q=оберег'
         limit = self.get_pagination_limit(url=base_url)
         # print(limit)
         logger.info(f'Всего страниц: {limit}')
